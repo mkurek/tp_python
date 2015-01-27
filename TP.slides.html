@@ -15,11 +15,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal/css/reveal.css">
+<link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
 
 <!-- For syntax highlighting -->
-<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -27,14 +27,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'reveal.js/css/print/pdf.css';
+        link.href = 'reveal/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
+<script src="reveal/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Get Font-awesome from cdn -->
@@ -1625,6 +1625,7 @@ span#checkpoint_status,span#autosave_status{font-size:small}
 .highlight .nv { color: #19177C } /* Name.Variable */
 .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
 .highlight .mf { color: #666666 } /* Literal.Number.Float */
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
@@ -1717,7 +1718,38 @@ div.output_prompt {
 <body>
 <div class="reveal">
 <div class="slides">
-<section>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Heading-1">Heading 1<a class="anchor-link" href="#Heading-1">&#182;</a></h1>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Heading-2">Heading 2<a class="anchor-link" href="#Heading-2">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Heading-5">Heading 5<a class="anchor-link" href="#Heading-5">&#182;</a></h5>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
     <section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -1786,9 +1818,7 @@ div.output_prompt {
 </div>
 </div>
 </div>
-</section>
-    </section><section>
-    <section>
+</section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1825,9 +1855,7 @@ div.output_prompt {
 </div>
 </div>
 </div>
-    </div></section>
-    </section><section>
-    <section>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1905,9 +1933,7 @@ In&nbsp;[8]:
 </div>
 
 </div>
-    </aside></section>
-    </section><section>
-    <section>
+    </aside></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1963,9 +1989,20 @@ In&nbsp;[8]:
 </div>
 </div>
 </div>
-</section>
-    </section><section>
-    <section>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>wcięcia wyznaczają bloki logiczne (brak klamr)</li>
+</ul>
+</div>
+</div>
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1997,7 +2034,7 @@ Hello world
 </div>
 </div>
 
-</div></section><section>
+</div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2008,8 +2045,8 @@ In&nbsp;[17]:
     <div class="input_area">
 <div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c"># int</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s">&#39;abc&#39;</span>  <span class="c"># str</span>
-<span class="n">c</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c"># pusta wartość - odpowiednik NULL, NIL itd</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">d</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c"># pusta wartość - odpowiednik NULL, NIL itd</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -2032,7 +2069,8 @@ In&nbsp;[17]:
 </div>
 </div>
 
-</div></section><section>
+</div>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2048,10 +2086,76 @@ In&nbsp;[10]:
 </div>
 </div>
 
-</div></section>
-    </section><section>
-    <section>
+</div>
+    </div></section><section>
     
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Ci&#261;gi-znak&#243;w">Ci&#261;gi znak&#243;w<a class="anchor-link" href="#Ci&#261;gi-znak&#243;w">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;abc&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s">&#39;def&#39;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">multi</span>
+<span class="s">line</span>
+<span class="s">string</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+abc
+def
+
+multi
+line
+string
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Funkcja">Funkcja<a class="anchor-link" href="#Funkcja">&#182;</a></h5>
+</div>
+</div>
+</div>
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2089,10 +2193,23 @@ In&nbsp;[18]:
 </div>
 </div>
 
-</div></section>
-    </section><section>
-    <section>
+</div></section><section>
     
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Klasy</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2147,6 +2264,18 @@ How how
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>self</li>
+<li><strong>init</strong> to funkcja inicjalizująca</li>
+</ul>
+</div>
+</div>
 </div><aside class="notes">
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -2154,7 +2283,7 @@ How how
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TODO</p>
+<p>TODO: self, wszystko jest obiektem, pętle, if, operatory and/or/not, wyjątki</p>
 </div>
 </div>
 </div>
@@ -2167,11 +2296,26 @@ How how
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Podstawowe-struktury-danych">Podstawowe struktury danych<a class="anchor-link" href="#Podstawowe-struktury-danych">&#182;</a></h2>
+<h2 id="Podstawowe-typy-i-struktury-danych">Podstawowe typy i struktury danych<a class="anchor-link" href="#Podstawowe-typy-i-struktury-danych">&#182;</a></h2>
 </div>
 </div>
 </div>
-</section>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Liczby (int, float, Decimal)</li>
+<li>Ciągi znaków (str, unicode)</li>
+<li>Listy (list)</li>
+<li>Tuple</li>
+<li>Słowniki (dict)</li>
+</ul>
+</div>
+</div>
+</div></section>
     </section><section>
     <section>
     
@@ -2193,7 +2337,6 @@ How how
 <ul>
 <li>mutowalne</li>
 <li>dynamiczny rozmiar</li>
-<li></li>
 </ul>
 </div>
 </div>
@@ -2202,11 +2345,13 @@ How how
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[2]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;2&quot;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">l3</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 
@@ -2231,6 +2376,54 @@ In&nbsp;[13]:
 </div>
 
 </div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="odczytywanie-elementu">odczytywanie elementu<a class="anchor-link" href="#odczytywanie-elementu">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[3]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+&apos;2&apos;
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
     </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -2242,7 +2435,8 @@ In&nbsp;[13]:
 </div>
 </div>
 </div>
-
+<div class="fragment">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2275,7 +2469,8 @@ In&nbsp;[14]:
 </div>
 </div>
 
-</div><div class="fragment">
+</div>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2287,7 +2482,8 @@ In&nbsp;[14]:
 </div>
 </div>
 
-    </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2319,7 +2515,8 @@ In&nbsp;[15]:
 </div>
 </div>
 
-</div><div class="fragment">
+</div>
+    </div><div class="fragment">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2331,7 +2528,8 @@ In&nbsp;[15]:
 </div>
 </div>
 
-    </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2365,7 +2563,8 @@ In&nbsp;[16]:
 </div>
 </div>
 
-</div></section>
+</div>
+    </div></section>
     </section><section>
     <section>
     
@@ -2379,6 +2578,19 @@ In&nbsp;[16]:
 </div>
 </div>
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>działają jak listy, ale..</li>
+<li>niemutowalne (również elementy)</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2386,7 +2598,202 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="p">()</span>
+<span class="n">t4</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="S&#322;owniki-(dict)">S&#322;owniki (dict)<a class="anchor-link" href="#S&#322;owniki-(dict)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">:</span> <span class="s">&#39;3&#39;</span><span class="p">}</span>
+<span class="n">d</span><span class="p">[</span><span class="s">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;This is one&quot;</span>
+<span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>     <span class="o">=</span> <span class="s">&quot;This is two&quot;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>TODO: set, </p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tips-&amp;-Tricks">Tips &amp; Tricks<a class="anchor-link" href="#Tips-&amp;-Tricks">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>TODO: lambda, zakresy na liście</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Modu&#322;y,-pakiety,-paczkowanie-i-virtualenv">Modu&#322;y, pakiety, paczkowanie i virtualenv<a class="anchor-link" href="#Modu&#322;y,-pakiety,-paczkowanie-i-virtualenv">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>moduł - pojedynczy plik</li>
+<li>pakiet - zbiór modułów (konieczny plik <strong>init</strong>.py)</li>
+</ul>
+</div>
+</div>
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+/Users/ext_mateusz.kurek/workspace/put/tp_python/tp_python
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s">&#39;11.1111111&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="c"># niezalecane</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">PI</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Paczkowanie</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">TODO</span><span class="p">:</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="p">(</span><span class="n">metadane</span><span class="p">),</span> <span class="n">jak</span> <span class="n">wygl</span><span class="err">ą</span><span class="n">da</span> <span class="n">drzewo</span> <span class="n">plik</span><span class="err">ó</span><span class="n">w</span><span class="p">,</span> <span class="n">instalacja</span> <span class="n">przez</span> <span class="n">pip</span>
 </pre></div>
 
 </div>
@@ -2394,13 +2801,76 @@ In&nbsp;[]:
 </div>
 
 </div></section>
-    </section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">Virtualenv</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
-<script src="reveal.js/lib/js/head.min.js"></script>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>TODO</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Biblioteka-standardowa-(stdlib)">Biblioteka standardowa (stdlib)<a class="anchor-link" href="#Biblioteka-standardowa-(stdlib)">&#182;</a></h2>
+</div>
+</div>
+</div>
 
-<script src="reveal.js/js/reveal.js"></script>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>TODO: sortowanie, datetime, obsługa plików, re, os, httplib</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="reveal/lib/js/head.min.js"></script>
+
+<script src="reveal/js/reveal.js"></script>
 
 <script>
 
@@ -2415,9 +2885,9 @@ transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/c
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
-{ src: "reveal.js/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "reveal.js/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "reveal.js/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
+{ src: "reveal/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+{ src: "reveal/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: "reveal/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
 ]
 });
 </script>
