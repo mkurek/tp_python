@@ -15,11 +15,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal/css/reveal.css">
-<link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- For syntax highlighting -->
-<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -27,14 +27,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'reveal/css/print/pdf.css';
+        link.href = 'reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="reveal/lib/js/html5shiv.js"></script>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Get Font-awesome from cdn -->
@@ -1625,7 +1625,6 @@ span#checkpoint_status,span#autosave_status{font-size:small}
 .highlight .nv { color: #19177C } /* Name.Variable */
 .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
 .highlight .mf { color: #666666 } /* Literal.Number.Float */
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
@@ -1718,38 +1717,7 @@ div.output_prompt {
 <body>
 <div class="reveal">
 <div class="slides">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Heading-1">Heading 1<a class="anchor-link" href="#Heading-1">&#182;</a></h1>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Heading-2">Heading 2<a class="anchor-link" href="#Heading-2">&#182;</a></h2>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Heading-5">Heading 5<a class="anchor-link" href="#Heading-5">&#182;</a></h5>
-</div>
-</div>
-</div>
-</section>
-    </section><section>
+<section>
     <section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -1784,28 +1752,28 @@ div.output_prompt {
 </div>
 </div>
 </div>
-<div class="fragment">
-    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>wprowadzenie do Pythona</li>
-<li>struktury danych</li>
-<li>ipython</li>
-<li>pypy</li>
-<li>numpy/scipy</li>
-<li>trick &amp; tips</li>
-<li>paczkowanie/virtualenv</li>
+<li>Introduction to Python</li>
+<li>Syntax</li>
+<li>Basic types and data structures</li>
+<li>Advanced usage (tips &amp; tricks)</li>
+<li>Built-in functions &amp; Standard library</li>
+<li>Modules, packages, virtualenv</li>
+<li>IPython</li>
+<li>PyPy</li>
+<li>NumPy/SciPy</li>
 <li>scikit-learn </li>
-<li>django</li>
+<li>Django</li>
 </ul>
 </div>
 </div>
-</div>
-    </div></section>
+</div></section>
     </section><section>
     <section>
     
@@ -1814,7 +1782,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Wprowadzenie-do-Pythona">Wprowadzenie do Pythona<a class="anchor-link" href="#Wprowadzenie-do-Pythona">&#182;</a></h2>
+<h2 id="Introduction-to-Python">Introduction to Python<a class="anchor-link" href="#Introduction-to-Python">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -1825,7 +1793,7 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Historia">Historia<a class="anchor-link" href="#Historia">&#182;</a></h3>
+<h3 id="History">History<a class="anchor-link" href="#History">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1837,9 +1805,9 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Twórca: <strong>Guidio van Rossum</strong></li>
-<li>Kiedy: 1991</li>
-<li>Aktualna wersja: 2.7.9 / 3.4.2</li>
+<li>Creator: <strong>Guidio van Rossum</strong></li>
+<li>When: 1991</li>
+<li>Current version: 2.7.9 / 3.4.2</li>
 </ul>
 </div>
 </div>
@@ -1855,14 +1823,25 @@ div.output_prompt {
 </div>
 </div>
 </div>
-    </div></section><section>
+    </div><aside class="notes">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Filozofia-Pythona">Filozofia Pythona<a class="anchor-link" href="#Filozofia-Pythona">&#182;</a></h3>
+<p>Over six years ago, in December 1989, I was looking for a &quot;hobby&quot; programming project that would keep me occupied during the week around Christmas. My office ... would be closed, but I had a home computer, and not much else on my hands. I decided to write an interpreter for the new scripting language I had been thinking about lately: a descendant of ABC that would appeal to Unix/C hackers. I chose Python as a working title for the project, being in a slightly irreverent mood (and a big fan of Monty Python&#39;s Flying Circus).</p>
+</div>
+</div>
+</div>
+    </aside></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Python-philosophy">Python philosophy<a class="anchor-link" href="#Python-philosophy">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1874,17 +1853,66 @@ div.output_prompt {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>przejrzystość implementacji</li>
-<li>zwięzła składnia</li>
-<li>język dynamicznie typowany</li>
-<li>wspiera wiele paradygmatów<ul>
-<li>obiektowy</li>
-<li>imperatywny</li>
-<li>funkcyjny (częściowo)</li>
-<li>aspektowy (częściowo)</li>
+<li>emphasizes code readability</li>
+<li>dynamic type system (but strong!)</li>
+<li>multi-paradigm:<ul>
+<li>object-oriented</li>
+<li>imperative</li>
+<li>functional (partialy)</li>
+<li>aspect (parialy)</li>
 </ul>
 </li>
+<li>duck typing</li>
 </ul>
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>programowanie aspektowe przez metaklasy i magiczne metody</li>
+<li>dynamicznie typowany (typ ustalany automatycznie), ale silne (określony typ, nie wolno używać w kontekście innego typu)</li>
+<li>duck typing - jeśli coś wygląda jak kaczka i zachowuje się jak kaczka to jest kaczką - rozpoznawanie typu obiektu nie na podstawie deklaracji, ale przez badanie metod udostępnionych przez obiekt</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Powszechnie jest stosowana rekurencja zamiast pętli</li>
+<li>Brak efektów ubocznych (brak globalnego stanu, języki czysto funkcyjne)</li>
+<li>Leniwe wartościowanie</li>
+<li>Funkcje to podstawowe pojęcia (ang. first-class )</li>
+<li>Funkcje mogą operować na funkcjach (ang. high-order )</li>
+<li>Listy są podstawową strukturą danych</li>
+<li>Inne pojęcie czasu...</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside><div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Python probably has the reputation of supporting
+functional programming based on the inclusion of lambda, map,
+filter, and reduce in the language, but in my eyes these are just
+<strong>syntactic sugar</strong>, and not the fundamental building blocks that they
+are in functional languages.</p>
 </div>
 </div>
 </div>
@@ -1913,15 +1941,16 @@ div.output_prompt {
 <li>Complex is better than complicated</li>
 <li>Readibility counts</li>
 </ul>
+<p>...</p>
 </div>
 </div>
 </div>
-    </div><aside class="notes">
+    </div></section><section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[8]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -1932,15 +1961,50 @@ In&nbsp;[8]:
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&apos;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&apos;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&apos;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&apos;s do more of those!
+
+</pre>
 </div>
-    </aside></section><section>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="G&#322;&#243;wne-r&#243;&#380;nice-Python/C">G&#322;&#243;wne r&#243;&#380;nice Python/C<a class="anchor-link" href="#G&#322;&#243;wne-r&#243;&#380;nice-Python/C">&#182;</a></h3>
+<h3 id="Python-vs-C/C++">Python vs C/C++<a class="anchor-link" href="#Python-vs-C/C++">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1957,20 +2021,20 @@ In&nbsp;[8]:
 <th>C/C++</th>
 </tr>
 <tr>
-<td>Łatwy i przejrzysty (szybka krzywa uczenia)</td>
-<td>C++ - 775 stron specyfikacji języka</td>
+<td>Easy and legible</td>
+<td>775 pages of language specification</td>
 </tr>
 <tr>
-<td>Interpretowany</td>
-<td>Kompilowany</td>
+<td>Interpreted</td>
+<td>Compiled</td>
 </tr>
 <tr>
 <td>Garbage Collector</td>
-<td>Brak GC</td>
+<td>Lack of GC</td>
 </tr>
 <tr>
-<td>Dynamicznie typowany</td>
-<td>Silnie typowany</td>
+<td>Dynamically typed</td>
+<td>Statically typed</td>
 </tr>
 </table>
 </div>
@@ -1985,7 +2049,7 @@ In&nbsp;[8]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sk&#322;adnia">Sk&#322;adnia<a class="anchor-link" href="#Sk&#322;adnia">&#182;</a></h3>
+<h3 id="Syntax">Syntax<a class="anchor-link" href="#Syntax">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -1997,7 +2061,9 @@ In&nbsp;[8]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>wcięcia wyznaczają bloki logiczne (brak klamr)</li>
+<li>uses whitespace to delimit program blocks (Off-side rule)</li>
+<li>everything is an object (variable, function, instance, even class)</li>
+<li>files with .py extensions</li>
 </ul>
 </div>
 </div>
@@ -2045,7 +2111,7 @@ In&nbsp;[17]:
     <div class="input_area">
 <div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c"># int</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s">&#39;abc&#39;</span>  <span class="c"># str</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">d</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c"># pusta wartość - odpowiednik NULL, NIL itd</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">d</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c"># empty value - equivalent of NULL, NIL etc</span>
 <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
 </pre></div>
 
@@ -2094,7 +2160,7 @@ In&nbsp;[10]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Ci&#261;gi-znak&#243;w">Ci&#261;gi znak&#243;w<a class="anchor-link" href="#Ci&#261;gi-znak&#243;w">&#182;</a></h5>
+<h5 id="Strings">Strings<a class="anchor-link" href="#Strings">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -2102,7 +2168,7 @@ In&nbsp;[10]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[9]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2114,7 +2180,7 @@ In&nbsp;[5]:
 <span class="s">string</span>
 <span class="s">&quot;&quot;&quot;</span>
 <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 
@@ -2130,12 +2196,219 @@ In&nbsp;[5]:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 abc
-def
+e
 
 multi
 line
 string
 
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>ciągi można definiować w &quot;&quot;, &#39;&#39; i &quot;&quot;&quot;&quot;&quot;&quot;</li>
+<li>może być traktowany jako lista znaków</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Loops">Loops<a class="anchor-link" href="#Loops">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s">&#39;Python&#39;</span><span class="p">:</span>
+   <span class="k">print</span> <span class="s">&#39;Current Letter :&#39;</span><span class="p">,</span> <span class="n">letter</span>
+
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;banana&#39;</span><span class="p">,</span> <span class="s">&#39;apple&#39;</span><span class="p">,</span>  <span class="s">&#39;mango&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+   <span class="k">print</span> <span class="s">&#39;Current fruit :&#39;</span><span class="p">,</span> <span class="n">fruit</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Current Letter : P
+Current Letter : y
+Current Letter : t
+Current Letter : h
+Current Letter : o
+Current Letter : n
+Current fruit : banana
+Current fruit : apple
+Current fruit : mango
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+0
+1
+2
+3
+4
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>zwrócić uwagę, że nie ma ++ i -- w Pythonie</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Decision-Making">Decision Making<a class="anchor-link" href="#Decision-Making">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">&quot;abc&quot;</span>
+<span class="n">z</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="ow">or</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="s">&quot;abc&quot;</span> <span class="ow">and</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Valid&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="ow">not</span> <span class="n">z</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Maybe?&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Not valid&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Valid
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">&quot;abc&quot;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="bp">None</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+abc
 
 </pre>
 </div>
@@ -2151,7 +2424,7 @@ string
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Funkcja">Funkcja<a class="anchor-link" href="#Funkcja">&#182;</a></h5>
+<h5 id="Function">Function<a class="anchor-link" href="#Function">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -2163,8 +2436,7 @@ In&nbsp;[18]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c"># funkcja</span>
-<span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="highlight"><pre>    <span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
 
 <span class="n">power</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -2195,21 +2467,16 @@ In&nbsp;[18]:
 
 </div></section><section>
     
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">Klasy</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Class-(OOP)">Class (OOP)<a class="anchor-link" href="#Class-(OOP)">&#182;</a></h5>
 </div>
 </div>
 </div>
 
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2264,15 +2531,104 @@ How how
 </div>
 </div>
 
-</div>
+</div><aside class="notes">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>self</li>
-<li><strong>init</strong> to funkcja inicjalizująca</li>
+<li>self - instacja klasy, dodawana &quot;domyślnie&quot; jako pierwszy parametr metody</li>
+<li><code>__init__</code> to funkcja inicjalizująca</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Exceptions">Exceptions<a class="anchor-link" href="#Exceptions">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>event, which occurs during the execution of a program, that disrupts the normal flow of the program&#39;s instructions</li>
+<li>create your own exceptions by deriving from the Exception class</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">10</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Don&#39;t break the universe&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Run with or without exception&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Don&apos;t break the universe
+Run with or without exception
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Naming-conventions">Naming conventions<a class="anchor-link" href="#Naming-conventions">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Class names start with an uppercase letter and all other identifiers with a lowercase letter (ex. <code>SomeClass</code>).</li>
+<li>Starting an identifier with a single leading underscore indicates <strong>by convention</strong> that the identifier is meant to be private (ex. <code>_secret_value</code>).</li>
+<li>Starting an identifier with two leading underscores indicates a strongly private identifier (ex. <code>__classified_value</code>).</li>
+<li>If the identifier also ends with two trailing underscores, the identifier is a language-defined special name (ex. <code>__init__</code>).</li>
 </ul>
 </div>
 </div>
@@ -2283,7 +2639,10 @@ How how
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TODO: self, wszystko jest obiektem, pętle, if, operatory and/or/not, wyjątki</p>
+<ul>
+<li>mimo prywatności, wszystko da się odczytać</li>
+<li><strong>XXX_</strong> -&gt; magic method</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2296,7 +2655,7 @@ How how
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Podstawowe-typy-i-struktury-danych">Podstawowe typy i struktury danych<a class="anchor-link" href="#Podstawowe-typy-i-struktury-danych">&#182;</a></h2>
+<h2 id="Basic-types-and-data-structures">Basic types and data structures<a class="anchor-link" href="#Basic-types-and-data-structures">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2307,11 +2666,12 @@ How how
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Liczby (int, float, Decimal)</li>
-<li>Ciągi znaków (str, unicode)</li>
-<li>Listy (list)</li>
+<li>Number (int, float, Decimal)</li>
+<li>String</li>
+<li>List</li>
 <li>Tuple</li>
-<li>Słowniki (dict)</li>
+<li>Dictionary</li>
+<li>Set</li>
 </ul>
 </div>
 </div>
@@ -2324,7 +2684,7 @@ How how
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Listy">Listy<a class="anchor-link" href="#Listy">&#182;</a></h3>
+<h3 id="List">List<a class="anchor-link" href="#List">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2335,8 +2695,10 @@ How how
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>mutowalne</li>
-<li>dynamiczny rozmiar</li>
+<li>sequence of Python objects</li>
+<li>mutable</li>
+<li>dynamic size</li>
+<li>items in a list does not need to have the same type</li>
 </ul>
 </div>
 </div>
@@ -2383,7 +2745,7 @@ In&nbsp;[2]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="odczytywanie-elementu">odczytywanie elementu<a class="anchor-link" href="#odczytywanie-elementu">&#182;</a></h5>
+<h5 id="accessing-element">accessing element<a class="anchor-link" href="#accessing-element">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -2431,7 +2793,7 @@ In&nbsp;[3]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="dodawanie-element&#243;w-na-koniec">dodawanie element&#243;w na koniec<a class="anchor-link" href="#dodawanie-element&#243;w-na-koniec">&#182;</a></h5>
+<h5 id="adding-element-at-the-end">adding element at the end<a class="anchor-link" href="#adding-element-at-the-end">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -2477,7 +2839,7 @@ In&nbsp;[14]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="wstawianie-element&#243;w-&quot;w-&#347;rodku&quot;-listy">wstawianie element&#243;w "w &#347;rodku" listy<a class="anchor-link" href="#wstawianie-element&#243;w-&quot;w-&#347;rodku&quot;-listy">&#182;</a></h5>
+<h5 id="adding-element-in-the-middle-of-the-list">adding element in the middle of the list<a class="anchor-link" href="#adding-element-in-the-middle-of-the-list">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -2523,7 +2885,7 @@ In&nbsp;[15]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="d&#322;ugo&#347;&#263;-listy">d&#322;ugo&#347;&#263; listy<a class="anchor-link" href="#d&#322;ugo&#347;&#263;-listy">&#182;</a></h5>
+<h5 id="list-length">list length<a class="anchor-link" href="#list-length">&#182;</a></h5>
 </div>
 </div>
 </div>
@@ -2573,7 +2935,7 @@ In&nbsp;[16]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Tuple-/-krotki-/-ntki-(tuple)">Tuple / krotki / ntki (tuple)<a class="anchor-link" href="#Tuple-/-krotki-/-ntki-(tuple)">&#182;</a></h3>
+<h3 id="Tuple">Tuple<a class="anchor-link" href="#Tuple">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2584,8 +2946,9 @@ In&nbsp;[16]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>działają jak listy, ale..</li>
-<li>niemutowalne (również elementy)</li>
+<li>sequence of immutable Python objects</li>
+<li>works and acts like lists, but...</li>
+<li>tuples can&#39;t be changed</li>
 </ul>
 </div>
 </div>
@@ -2594,17 +2957,36 @@ In&nbsp;[16]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[4]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;2&quot;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span>
 <span class="n">t3</span> <span class="o">=</span> <span class="p">()</span>
 <span class="n">t4</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">t2</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+(1, &apos;2&apos;, 3.0)
+c
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -2618,7 +3000,246 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="S&#322;owniki-(dict)">S&#322;owniki (dict)<a class="anchor-link" href="#S&#322;owniki-(dict)">&#182;</a></h3>
+<h3 id="Dictionary">Dictionary<a class="anchor-link" href="#Dictionary">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>key-value storage</li>
+<li>also known as associative arrays or hash tables</li>
+<li>mutable</li>
+<li>The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.</li>
+<li>unordered!</li>
+</ul>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">:</span> <span class="s">&#39;3&#39;</span><span class="p">}</span>
+<span class="n">d</span><span class="p">[</span><span class="s">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;This is one&quot;</span>
+<span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>     <span class="o">=</span> <span class="s">&quot;This is two&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>  <span class="c"># order different than insertion order</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+{2: &apos;This is two&apos;, 3: &apos;3&apos;, &apos;one&apos;: &apos;This is one&apos;}
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="accessing-element">accessing element<a class="anchor-link" href="#accessing-element">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s">&#39;one&#39;</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&#39;One&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+This is one
+One
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Simple-check-if-element-(key!)-in-dictionary">Simple check if element (key!) in dictionary<a class="anchor-link" href="#Simple-check-if-element-(key!)-in-dictionary">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="mi">2</span> <span class="ow">in</span> <span class="n">d</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[8]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+True
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Delete-element">Delete element<a class="anchor-link" href="#Delete-element">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">del</span> <span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Iterating-(tricky!)">Iterating (tricky!)<a class="anchor-link" href="#Iterating-(tricky!)">&#182;</a></h5>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="k">print</span><span class="p">(</span><span class="s">&#39;Keys&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>  <span class="c"># equivalent of d.keys()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">Values&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">Items&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Keys
+3
+one
+
+Values
+3
+This is one
+
+Items
+(3, &apos;3&apos;)
+(&apos;one&apos;, &apos;This is one&apos;)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Set">Set<a class="anchor-link" href="#Set">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -2627,30 +3248,66 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[12]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">:</span> <span class="s">&#39;3&#39;</span><span class="p">}</span>
-<span class="n">d</span><span class="p">[</span><span class="s">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;This is one&quot;</span>
-<span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>     <span class="o">=</span> <span class="s">&quot;This is two&quot;</span>
+<div class="highlight"><pre><span class="n">basket</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;apple&#39;</span><span class="p">,</span> <span class="s">&#39;orange&#39;</span><span class="p">,</span> <span class="s">&#39;apple&#39;</span><span class="p">,</span> <span class="s">&#39;pear&#39;</span><span class="p">,</span> <span class="s">&#39;orange&#39;</span><span class="p">,</span> <span class="s">&#39;banana&#39;</span><span class="p">]</span>
+<span class="n">fruit</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">basket</span><span class="p">)</span>               <span class="c"># create a set without duplicates</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+<span class="n">fruit</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s">&#39;orange&#39;</span><span class="p">,</span> <span class="s">&#39;pear&#39;</span><span class="p">,</span> <span class="s">&#39;apple&#39;</span><span class="p">,</span> <span class="s">&#39;banana&#39;</span><span class="p">])</span>
+<span class="s">&#39;orange&#39;</span> <span class="ow">in</span> <span class="n">fruit</span>                 <span class="c"># fast membership testing</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+set([&apos;orange&apos;, &apos;pear&apos;, &apos;apple&apos;, &apos;banana&apos;])
+
+</pre>
 </div>
-    </div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[12]:</div>
+
+
+<div class="output_text output_subarea output_pyout">
+<pre>
+True
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><aside class="notes">
+    
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TODO: set, </p>
+<ul>
+<li>złożoność - szybsze niż na liście sprawdzanie czy element znajduje się w secie</li>
+<li>implementacja taka jak słownika (ale tutaj bez wartości)</li>
+<li>tylko unikalnie elementy</li>
+</ul>
 </div>
 </div>
-</div></section>
+</div>
+    </aside></section>
     </section><section>
     <section>
     
@@ -2659,7 +3316,7 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tips-&amp;-Tricks">Tips &amp; Tricks<a class="anchor-link" href="#Tips-&amp;-Tricks">&#182;</a></h2>
+<h2 id="Advanced-usage---tips-&amp;-tricks">Advanced usage - tips &amp; tricks<a class="anchor-link" href="#Advanced-usage---tips-&amp;-tricks">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2669,7 +3326,7 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TODO: lambda, zakresy na liście</p>
+<p>TODO: lambda, zakresy na liście, defaultdict, ordereddict, list comprehension, dict comprehension, <em>args, *</em>kwargs, funkcje zwracające wiele wartości (i rozpakowanie), isinstance</p>
 </div>
 </div>
 </div></section>
@@ -2681,7 +3338,7 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Modu&#322;y,-pakiety,-paczkowanie-i-virtualenv">Modu&#322;y, pakiety, paczkowanie i virtualenv<a class="anchor-link" href="#Modu&#322;y,-pakiety,-paczkowanie-i-virtualenv">&#182;</a></h2>
+<h2 id="Modules,-packaging-and-virtualenv">Modules, packaging and virtualenv<a class="anchor-link" href="#Modules,-packaging-and-virtualenv">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2693,8 +3350,8 @@ In&nbsp;[]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>moduł - pojedynczy plik</li>
-<li>pakiet - zbiór modułów (konieczny plik <strong>init</strong>.py)</li>
+<li>module - single Python file</li>
+<li>package - collection of modules - dictionary (<strong>init</strong>.py file required!)</li>
 </ul>
 </div>
 </div>
@@ -2704,7 +3361,7 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[13]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2723,7 +3380,7 @@ In&nbsp;[6]:
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
-/Users/ext_mateusz.kurek/workspace/put/tp_python/tp_python
+/Users/mateusz/workspace/put/tp_python/tp_python
 
 </pre>
 </div>
@@ -2737,7 +3394,7 @@ In&nbsp;[6]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[14]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2749,76 +3406,90 @@ In&nbsp;[]:
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+11.1111111
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div><div class="fragment">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[15]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c"># niezalecane</span>
 <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="k">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">PI</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+1.22464679915e-16
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
     </div></section><section>
     
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">Paczkowanie</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Packaging">Packaging<a class="anchor-link" href="#Packaging">&#182;</a></h3>
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">TODO</span><span class="p">:</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="p">(</span><span class="n">metadane</span><span class="p">),</span> <span class="n">jak</span> <span class="n">wygl</span><span class="err">ą</span><span class="n">da</span> <span class="n">drzewo</span> <span class="n">plik</span><span class="err">ó</span><span class="n">w</span><span class="p">,</span> <span class="n">instalacja</span> <span class="n">przez</span> <span class="n">pip</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>TODO: setup.py (metadane), jak wygląda drzewo plików, instalacja przez pip</p>
 </div>
 </div>
-</div>
-
-</div></section>
-    </section><section>
-    <section>
+</div></section><section>
     
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
-In&nbsp;[]:
 </div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">Virtualenv</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Virtualenv">Virtualenv<a class="anchor-link" href="#Virtualenv">&#182;</a></h3>
 </div>
 </div>
 </div>
 
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -2836,7 +3507,7 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Biblioteka-standardowa-(stdlib)">Biblioteka standardowa (stdlib)<a class="anchor-link" href="#Biblioteka-standardowa-(stdlib)">&#182;</a></h2>
+<h2 id="Built-in-Functions-and-Standard-Library-(stdlib)">Built-in Functions and Standard Library (stdlib)<a class="anchor-link" href="#Built-in-Functions-and-Standard-Library-(stdlib)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2846,10 +3517,267 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>TODO: sortowanie, datetime, obsługa plików, re, os, httplib</p>
+<p>TODO: 
+sorted, zip, enumerate, range,  chr/ord, dir, min, max
+all/any, map, sum, filter?, reduce?
+datetime, obsługa plików, re, os, httplib</p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="IPython">IPython<a class="anchor-link" href="#IPython">&#182;</a></h2>
 </div>
 </div>
 </div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>rozbudowany shell do Pythona <ul>
+<li>kolorowanie składni</li>
+<li>podpowiadanie składni </li>
+<li>wizualizacje</li>
+</ul>
+</li>
+<li>IPython Notebook</li>
+<li>narzędzia do programowania równoległego </li>
+</ul>
+<p>TODO -&gt; eng</p>
+</div>
+</div>
+</div><div class="fragment">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s">&#39;H6dLGQw9yFQ&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">
+    Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_pyout">
+
+        <iframe
+            width="400"
+            height=300"
+            src="https://www.youtube.com/embed/H6dLGQw9yFQ"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>prezentacja &quot;live&quot; </p>
+<p>pokazać jakiś przykład który był powyżej (np jakieś listy, funkcje, import, podpowiadanie tabem) i że działają niektóre komendy konsolowe (ls)</p>
+</div>
+</div>
+</div>
+    </aside></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="IPython-Parallel-computing">IPython Parallel computing<a class="anchor-link" href="#IPython-Parallel-computing">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="fragment">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Steer traditional MPI applications on a supercomputer from an IPython session on your laptop.</li>
+<li>Analyze and visualize large datasets (that could be remote and/or distributed) interactively.</li>
+<li>Tie together multiple MPI jobs running on different systems into one giant distributed and parallel system.</li>
+<li>Start a parallel job on your cluster and then have a remote collaborator connect to it and pull back data into their local IPython session for plotting and analysis.</li>
+<li>Run a set of tasks on a set of CPUs using dynamic load balancing.</li>
+</ul>
+</div>
+</div>
+</div>
+    </div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Steer traditional MPI applications on a supercomputer from an IPython session on your laptop.</li>
+<li>Analyze and visualize large datasets (that could be remote and/or distributed) interactively using IPython and tools like matplotlib/TVTK.</li>
+<li>Develop, test and debug new parallel algorithms (that may use MPI) interactively.</li>
+<li>Tie together multiple MPI jobs running on different systems into one giant distributed and parallel system.</li>
+<li>Start a parallel job on your cluster and then have a remote collaborator connect to it and pull back data into their local IPython session for plotting and analysis.</li>
+<li>Run a set of tasks on a set of CPUs using dynamic load balancing.</li>
+</ul>
+<p>IPython Engine, Schedulers, controller, hub</p>
+<p>IPYHTON tutorial paralell</p>
+<p>2011 Austin SciPy Conference
+Tutorial for IPython paralell computing
+<a href="http://minrk.github.io/scipy-tutorial-2011/">http://minrk.github.io/scipy-tutorial-2011/</a></p>
+</div>
+</div>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="PyPy">PyPy<a class="anchor-link" href="#PyPy">&#182;</a></h2>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Python implementation written in RPython</li>
+<li>Can be compiled to Java bytecode, CLR, C</li>
+<li>Many times faster than standard Python</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="PyPy-vs-CPython">PyPy vs CPython<a class="anchor-link" href="#PyPy-vs-CPython">&#182;</a></h3>
+</div>
+</div>
+</div>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>PyPy 6.3 times faster (as for basic)</li>
+<li>no GIL (Global Interpreter Lock) drawbacks</li>
+<li>many of the libraries require CPython</li>
+<li>need of reorganization of tools</li>
+<li>in the end efficiency gain is unsure</li>
+</ul>
+</div>
+</div>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Restricted Python - restrictions enabling inferring datatype on compile timr</li>
+<li>można bardziej rozwinąć temat GIL (tylko jeden proces CPythona działa na raz)</li>
+</ul>
+</div>
+</div>
+</div>
+    </aside></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="NumPy">NumPy<a class="anchor-link" href="#NumPy">&#182;</a></h2>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SciPy">SciPy<a class="anchor-link" href="#SciPy">&#182;</a></h2>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ScikitLearn">ScikitLearn<a class="anchor-link" href="#ScikitLearn">&#182;</a></h2>
+</div>
+</div>
+</div>
+</section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Django">Django<a class="anchor-link" href="#Django">&#182;</a></h2>
+</div>
+</div>
+</div>
+
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2864,13 +3792,14 @@ In&nbsp;[]:
 </div>
 </div>
 
-</div>
+</div></section>
+    </section>
 </div>
 </div>
 
-<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal.js/lib/js/head.min.js"></script>
 
-<script src="reveal/js/reveal.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
 
 <script>
 
@@ -2885,9 +3814,9 @@ transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/c
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
-{ src: "reveal/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "reveal/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "reveal/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
+{ src: "reveal.js/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+{ src: "reveal.js/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: "reveal.js/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
 ]
 });
 </script>
