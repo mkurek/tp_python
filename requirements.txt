@@ -3,6 +3,7 @@ Jinja2==2.7.3
 MarkupSafe==0.23
 Pigments==1.6
 Pygments==2.0.2
+Unipath==1.0
 backports.ssl-match-hostname==3.4.0.2
 certifi==14.05.14
 gnureadline==6.3.3
