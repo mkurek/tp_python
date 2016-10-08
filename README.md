@@ -7,3 +7,5 @@ git clone https://github.com/mkurek/tp_python
 cd tp_python
 ipython nbconvert --to=slides TP.ipynb --post serve --reveal-prefix=reveal.js
 ```
+
+- [ ] test
